@@ -51,9 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 quote.execute(editText.getText().toString());
                 try {
                     stock = quote.get();
-                    if (stock == null || stock.getSymbol() == "") {
-                        return false;
-                    } else {
+                    if (stock != null && stock.getSymbol() != "" && stock.getSymbol().length() <= 4) {
                         symbol.setText(symbolStr);
                         name.setText(nameStr);
                         price.setText(priceStr);
@@ -63,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast toast = Toast.makeText(MainActivity.this, "Quote for " + nameStr, Toast.LENGTH_SHORT);
                         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
                         toast.show();
+                    } else {
+                        return false;
                     }
                 } catch (Exception e) {
                 }
