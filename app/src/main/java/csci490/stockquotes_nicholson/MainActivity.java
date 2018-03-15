@@ -46,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
         editText.setOnKeyListener(new OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                Stock stock;
-                loadStockQuote quote = new loadStockQuote();
+                //Stock stock;
+                loadStockQuote quote = new loadStockQuote(MainActivity.this, symbol, name, price, time, change, range);
                 quote.execute(editText.getText().toString());
-                try {
+                /*try {
                     stock = quote.get();
                     if (stock != null && stock.getSymbol() != "" && stock.getSymbol().length() <= 4) {
                         symbol.setText(symbolStr);
@@ -65,13 +65,13 @@ public class MainActivity extends AppCompatActivity {
                         return false;
                     }
                 } catch (Exception e) {
-                }
-                return false;
+                }*/
+                return true;
             }
         });
     }
 
-    private class loadStockQuote extends AsyncTask<String, Void, Stock> {
+    /*private class loadStockQuote extends AsyncTask<String, Void, Stock> {
         @Override
         protected Stock doInBackground(String... params) {
 
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             }
             return stock;
         }
-    }
+    }*/
 
     @Override
     protected void onSaveInstanceState(Bundle outState){
