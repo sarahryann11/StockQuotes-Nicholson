@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="csci490.stockquotes_nicholson.MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/inputMargin"
+        android:hint="Enter Stock Symbol"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/symbolLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/symbol"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="@dimen/labelPadding"
+        android:paddingTop="@dimen/labelPaddingTop"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/symbol"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_alignBaseline="@+id/symbolLabel"
+        android:layout_marginStart="36dp"
+        android:layout_toEndOf="@+id/priceLabel"
+        android:text="@string/emptyString"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:layout_marginTop="110dp"
+        android:textColor="@color/black"
+        android:paddingLeft="@dimen/labelPadding"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_alignBaseline="@+id/nameLabel"
+        android:layout_alignBottom="@+id/symbolLabel"
+        android:layout_alignStart="@+id/symbol"
+        android:text="@string/emptyString"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/priceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lastTradePrice"
+        android:layout_marginTop="140dp"
+        android:textColor="@color/black"
+        android:paddingLeft="@dimen/labelPadding" />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_alignStart="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_alignBaseline="@id/priceLabel"
+        android:text="@string/emptyString"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lastTradeTime"
+        android:paddingLeft="@dimen/labelPadding"
+        android:textColor="@color/black"
+        android:layout_marginTop="170dp" />
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_below="@+id/price"
+        android:layout_alignStart="@+id/symbol"
+        android:layout_alignBaseline="@id/timeLabel"
+        android:text="@string/emptyString"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/changeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change"
+        android:paddingLeft="@dimen/labelPadding"
+        android:textColor="@color/black"
+        android:layout_marginTop="200dp" />
+
+
+    <TextView
+        android:id="@+id/change"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_below="@+id/time"
+        android:layout_alignStart="@+id/symbol"
+        android:layout_alignBaseline="@id/changeLabel"
+        android:text="@string/emptyString"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/rangeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fiftyTwoWeekRange"
+        android:paddingLeft="@dimen/labelPadding"
+        android:textColor="@color/black"
+        android:layout_marginTop="230dp" />
+
+
+    <TextView
+        android:id="@+id/range"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_below="@+id/change"
+        android:layout_alignStart="@+id/symbol"
+        android:layout_alignBaseline="@id/rangeLabel"
+        android:text="@string/emptyString"
+        android:textColor="@color/black" />
+
+</RelativeLayout>
