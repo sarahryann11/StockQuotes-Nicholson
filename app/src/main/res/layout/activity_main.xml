@@ -5,15 +5,16 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="csci490.stockquotes_nicholson.MainActivity">
+    tools:context="csci490.stockquotes_nicholson.MainActivity"
+    android:background="@color/grey">
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/inputMargin"
-        android:hint="Enter Stock Symbol"
-        android:layout_marginTop="15dp" />
+        android:hint="@string/hint"
+        android:layout_marginTop="@dimen/editTextTop" />
 
     <TextView
         android:id="@+id/symbolLabel"
@@ -23,17 +24,20 @@
         android:layout_marginTop="50dp"
         android:paddingLeft="@dimen/labelPadding"
         android:paddingTop="@dimen/labelPaddingTop"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize" />
 
     <TextView
         android:id="@+id/symbol"
         android:layout_width="@dimen/width"
         android:layout_height="@dimen/height"
         android:layout_alignBaseline="@+id/symbolLabel"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="@dimen/marginStart"
         android:layout_toEndOf="@+id/priceLabel"
         android:text="@string/emptyString"
-        android:textColor="@color/black" />
+        android:textColor="@color/green"
+        style="@style/AudioFileInfoOverlayText"
+        android:textSize="@dimen/textSize" />
 
     <TextView
         android:id="@+id/nameLabel"
@@ -42,7 +46,8 @@
         android:text="@string/name"
         android:layout_marginTop="110dp"
         android:textColor="@color/black"
-        android:paddingLeft="@dimen/labelPadding"/>
+        android:paddingLeft="@dimen/labelPadding"
+        android:textSize="@dimen/textSize" />
 
     <TextView
         android:id="@+id/name"
@@ -52,7 +57,9 @@
         android:layout_alignBottom="@+id/symbolLabel"
         android:layout_alignStart="@+id/symbol"
         android:text="@string/emptyString"
-        android:textColor="@color/black" />
+        android:textColor="@color/green"
+        style="@style/AudioFileInfoOverlayText"
+        android:textSize="@dimen/textSize" />
 
     <TextView
         android:id="@+id/priceLabel"
@@ -61,7 +68,8 @@
         android:text="@string/lastTradePrice"
         android:layout_marginTop="140dp"
         android:textColor="@color/black"
-        android:paddingLeft="@dimen/labelPadding" />
+        android:paddingLeft="@dimen/labelPadding"
+        android:textSize="@dimen/textSize" />
 
 
     <TextView
@@ -72,7 +80,9 @@
         android:layout_below="@+id/name"
         android:layout_alignBaseline="@id/priceLabel"
         android:text="@string/emptyString"
-        android:textColor="@color/black" />
+        android:textColor="@color/green"
+        style="@style/AudioFileInfoOverlayText"
+        android:textSize="@dimen/textSize" />
 
     <TextView
         android:id="@+id/timeLabel"
@@ -81,7 +91,8 @@
         android:text="@string/lastTradeTime"
         android:paddingLeft="@dimen/labelPadding"
         android:textColor="@color/black"
-        android:layout_marginTop="170dp" />
+        android:layout_marginTop="170dp"
+        android:textSize="@dimen/textSize" />
 
 
     <TextView
@@ -92,7 +103,9 @@
         android:layout_alignStart="@+id/symbol"
         android:layout_alignBaseline="@id/timeLabel"
         android:text="@string/emptyString"
-        android:textColor="@color/black" />
+        android:textColor="@color/green"
+        style="@style/AudioFileInfoOverlayText"
+        android:textSize="@dimen/textSize" />
 
     <TextView
         android:id="@+id/changeLabel"
@@ -101,7 +114,8 @@
         android:text="@string/change"
         android:paddingLeft="@dimen/labelPadding"
         android:textColor="@color/black"
-        android:layout_marginTop="200dp" />
+        android:layout_marginTop="200dp"
+        android:textSize="@dimen/textSize" />
 
 
     <TextView
@@ -112,7 +126,9 @@
         android:layout_alignStart="@+id/symbol"
         android:layout_alignBaseline="@id/changeLabel"
         android:text="@string/emptyString"
-        android:textColor="@color/black" />
+        android:textColor="@color/green"
+        style="@style/AudioFileInfoOverlayText"
+        android:textSize="@dimen/textSize" />
 
     <TextView
         android:id="@+id/rangeLabel"
@@ -121,7 +137,8 @@
         android:text="@string/fiftyTwoWeekRange"
         android:paddingLeft="@dimen/labelPadding"
         android:textColor="@color/black"
-        android:layout_marginTop="230dp" />
+        android:layout_marginTop="230dp"
+        android:textSize="@dimen/textSize" />
 
 
     <TextView
@@ -132,6 +149,8 @@
         android:layout_alignStart="@+id/symbol"
         android:layout_alignBaseline="@id/rangeLabel"
         android:text="@string/emptyString"
-        android:textColor="@color/black" />
+        android:textColor="@color/green"
+        style="@style/AudioFileInfoOverlayText"
+        android:textSize="@dimen/textSize" />
 
 </RelativeLayout>

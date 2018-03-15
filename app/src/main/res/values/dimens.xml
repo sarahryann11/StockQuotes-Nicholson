@@ -6,4 +6,7 @@
     <dimen name="width">175dp</dimen>
     <dimen name="height">25dp</dimen>
     <dimen name="inputMargin">100dp</dimen>
+    <dimen name="editTextTop">15dp</dimen>
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="marginStart">25dp</dimen>
 </resources>
