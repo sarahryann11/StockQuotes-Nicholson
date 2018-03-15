@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private class loadStockQuote extends AsyncTask<String, Integer, Stock> {
+    private class loadStockQuote extends AsyncTask<String, Void, Stock> {
         @Override
         protected Stock doInBackground(String... params) {
 
